@@ -8,9 +8,7 @@ app.get("/all", (req, res) => {
     let response = [];
     fetch("https://dummyjson.com/users")
       .then((resp) => resp.json())
-      .then((json) => (response = json));
-
-    res.send(response);
+      .then((json) => res.send(json));
   } catch (error) {
     res.send("something hapend!! please check your datadoc");
     throw Error;
