@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const port = 5000;
 
-app.get("/all", (req, res) => {
+app.get("/getall", (req, res) => {
   res.send("API for user service");
   // try {
   //   let response = [];
