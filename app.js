@@ -5,11 +5,11 @@ const port = 5000;
 
 app.get("/all", async (req, res) => {
   try {
-    console.log("res");
     await fetch("https://dummyjson.com/users")
       .then((resp) => resp.json())
-      .then((json) => res.json(json));
+      .then((json) => res.send(json));
   } catch (error) {
+    res.send("something hapend!! please check your datadoc");
     throw Error;
   }
 });
