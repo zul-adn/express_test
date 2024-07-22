@@ -3,10 +3,10 @@ const express = require("express");
 const app = express();
 const port = 5000;
 
-app.get("/all", async (req, res) => {
+app.get("/all", (req, res) => {
   try {
     let response = [];
-    await fetch("https://dummyjson.com/users")
+    fetch("https://dummyjson.com/users")
       .then((resp) => resp.json())
       .then((json) => (response = json));
 
